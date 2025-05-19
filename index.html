@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#007bff"/>
+    <title>PinItDown PWA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-map-marked-alt"></i> PinItDown Manager</h1>
+            <p class="header-subtitle">Organize your location-based notes</p>
+        </header>
+
+        <div class="main-content">
+            <div id="map-container">
+                <div class="map-header">
+                    <h3><i class="fas fa-map"></i> Interactive Map</h3>
+                    <p class="map-instruction">Click anywhere on the map to set a note location</p>
+                </div>
+                <div id="map"></div>
+            </div>
+
+            <div id="notes-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-list"></i> Notes in View</h2>
+                    <span id="notes-count" class="notes-count">0 notes</span>
+                </div>
+                <ul id="notes-list">
+                    <!-- Notes will be dynamically populated here -->
+                </ul>
+
+                <div id="note-form-container">
+                    <div class="form-header">
+                        <h3><i class="fas fa-edit"></i> Add/Edit Note</h3>
+                    </div>
+                    <form id="note-form" autocomplete="off">
+                        <input type="hidden" id="note-id">
+                        
+                        <div class="input-group">
+                            <label for="note-title">
+                                <i class="fas fa-heading"></i> Title
+                            </label>
+                            <input type="text" id="note-title" placeholder="Enter note title" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="note-content">
+                                <i class="fas fa-file-alt"></i> Content
+                            </label>
+                            <textarea id="note-content" placeholder="Enter note content" rows="4" required></textarea>
+                        </div>
+                        
+                        <div class="coordinates-group">
+                            <div class="input-group">
+                                <label for="note-lat">
+                                    <i class="fas fa-globe"></i> Latitude
+                                </label>
+                                <input type="text" id="note-lat" placeholder="Click map to set location" readonly>
+                            </div>
+                            <div class="input-group">
+                                <label for="note-lng">
+                                    <i class="fas fa-globe"></i> Longitude
+                                </label>
+                                <input type="text" id="note-lng" placeholder="Click map to set location" readonly>
+                            </div>
+                        </div>
+                        
+                        <div class="button-group">
+                            <button type="button" id="save-note-btn" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Save Note
+                            </button>
+                            <button type="button" id="clear-form-btn" class="btn btn-secondary" style="display:none;">
+                                <i class="fas fa-times"></i> Clear Form
+                            </button>
+                            <button type="button" id="delete-note-btn" class="btn btn-danger" style="display:none;">
+                                <i class="fas fa-trash"></i> Delete Note
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+    <script src="app.js"></script>
+</body>
+</html>
