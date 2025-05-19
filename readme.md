@@ -13,3 +13,71 @@ PinItDown — это прогрессивное веб-приложение (PWA
 ## Диаграмма, показывающая компоненты приложения и его рабочий процесс
 
 ![how the app works](./diagram/pid-pwa.png)
+
+## Используемые Технологии
+
+* HTML5
+* CSS3 (с адаптивным подходом "mobile-first")
+* JavaScript (ES6+)
+* Node.js для локального запуска сервера
+* [Leaflet.js](https://leafletjs.com/) - Библиотека для интерактивных карт
+* [OpenStreetMap](https://www.openstreetmap.org/) - Поставщик картографических данных
+* Принципы Progressive Web App (PWA):
+  * Service Worker для кэширования и офлайн-поддержки.
+  * Web App Manifest для возможности установки и свойств PWA.
+
+## Установка и Запуск
+
+1. Клонируйте репозиторий:
+
+    ```bash
+    git clone https://github.com/L00kAhead/pwa-map.git
+    ```
+
+2. Перейдите в папку проекта:
+
+    ```bash
+    cd pwa-map
+    ```
+
+    Убедитесь, что все файлы там.
+
+3. Установите Node.js, если у вас его еще нет. [Скачайте Node.js](https://nodejs.org/en/download)
+
+4. Установите один из локальных серверов для запуска приложения:
+
+* Вариант 1: установите `live-server` глобально и запустите его:
+
+    ```bash
+    npm install -g live-server
+    live-server
+    ```
+
+    После запуска сервер откроется по адресу 127.0.0.1:8080 или другому доступному порту.
+
+* Вариант 2: используйте http-server:
+
+    ```bash
+    npm install -g http-server
+    http-server -c-1
+    ```
+
+* Альтернатива: если вы используете VS Code, установите расширение Live Server, затем щелкните правой кнопкой мыши файл index.html и откройте его с помощью Live Server. Приложение откроется в браузере автоматически.
+
+Если все пойдет правильно, вы увидите этот экран:
+![home screen](./screenshots/homescreen.png)
+
+## Скриншоты приложения
+
+| **Планшет/Просмотр на большом экране** | **Вот как это выглядит на смартфоне** | **Временный значок. При нажатии на карту** |
+|:--------------------------------------:|:--------------------------------------:|:------------------------------------------:|
+| <img src="screenshots/homescreen.png" width="300" height="500"/> | <img src="screenshots/mobile-view.png" width="300" height="500"/> | <img src="screenshots/temp-icon.png" width="300" height="500"/> |
+
+| **Форма для создания заметки** | **После создания заметки она будет выглядеть на карте так** | **Редактировать заметку** |
+|:-----------------------------:|:------------------------------------------------------:|:--------------------------:|
+| <img src="screenshots/note-form.png" width="300" height="500"/> | <img src="screenshots/tap-to-see-created-note.png" width="300" height="500"/> | <img src="screenshots/edit-delete-note.png" width="300" height="500"/> |
+
+| **Вот как выглядят несколько заметок на карте** | **Заметки хранятся в localStorage** | **Ресурсы кэшируются в хранилище** |
+|:----------------------:|:----------------------------------:|:----------------------------------:|
+| <img src="screenshots/multiple-notes.png" width="300" height="500"/> | <img src="screenshots/localStorage.png" width="300" height="500"/> | <img src="screenshots/cacheStorage.png" width="300" height="500"/> |
+
