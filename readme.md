@@ -71,13 +71,13 @@ PinItDown — это прогрессивное веб-приложение (PWA
 
 | **Планшет/Просмотр на большом экране** | **Вот как это выглядит на смартфоне** | **Временный значок. При нажатии на карту** |
 |:--------------------------------------:|:--------------------------------------:|:------------------------------------------:|
-| <img src="screenshots/homescreen.png" width="300" height="500"/> | <img src="screenshots/mobile-view.png" width="300" height="500"/> | <img src="screenshots/temp-icon.png" width="300" height="500"/> |
+| <img src="screenshots/homescreen.png" width="600" height="500"/> | <img src="screenshots/mobile-view.png" width="300" height="500"/> | <img src="screenshots/temp-icon.png" width="300" height="500"/> |
 
 | **Форма для создания заметки** | **После создания заметки она будет выглядеть на карте так** | **Редактировать заметку** |
 |:-----------------------------:|:------------------------------------------------------:|:--------------------------:|
-| <img src="screenshots/note-form.png" width="300" height="500"/> | <img src="screenshots/tap-to-see-created-note.png" width="300" height="500"/> | <img src="screenshots/edit-delete-note.png" width="300" height="500"/> |
+| <img src="screenshots/note-form.png" width="500" height="500"/> | <img src="screenshots/tap-to-see-created-note.png" width="350" height="500"/> | <img src="screenshots/edit-delete-note.png" width="350" height="500"/> |
 
-| **Вот как выглядят несколько заметок на карте** | **Заметки хранятся в localStorage** | **Ресурсы кэшируются в хранилище** |
-|:----------------------:|:----------------------------------:|:----------------------------------:|
-| <img src="screenshots/multiple-notes.png" width="300" height="500"/> | <img src="screenshots/localStorage.png" width="300" height="500"/> | <img src="screenshots/cacheStorage.png" width="300" height="500"/> |
+| **Заметки хранятся в localStorage** | **Ресурсы кэшируются в хранилище** |
+|:----------------------------------:|:----------------------------------:|
+| <img src="screenshots/localStorage.png" width="800" height="500"/> | <img src="screenshots/cacheStorage.png" width="800" height="500"/> |
 
