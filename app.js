@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker
-      .register("/service-worker.js")
+      .register("./service-worker.js")
       .then((registration) => {
         console.log(
           "Service Worker registered successfully with scope:",
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         temporaryMarker = L.marker([lat, lng], {
           icon: L.icon({
-            iconUrl: "/icons/icon-512x512.png",
+            iconUrl: "./icons/icon-512x512.png",
             iconSize: [30, 41],
             iconAnchor: [12, 41],
             popupAnchor: [1, -34],
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const marker = L.marker([note.lat, note.lng], {
           isNoteMarker: true,
           icon: L.icon({
-            iconUrl: "/icons/mark.png",
+            iconUrl: "./icons/mark.png",
             iconSize: [25, 41],
             iconAnchor: [12, 41],
             popupAnchor: [1, -34],
